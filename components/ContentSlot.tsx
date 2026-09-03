@@ -1,5 +1,5 @@
 import type { ContentSlotProps } from "@venore/theme-sdk";
-import { Breadcrumbs } from "../../venore-slime/components/Breadcrumbs";
+import { Breadcrumbs } from "./Breadcrumbs";
 
 // Breadcrumbs é o mesmo componente do Venore Slime, reaproveitado como está: puramente
 // tipográfico (texto + chevron), já sem sombra/gradiente nenhum — não há identidade visual própria

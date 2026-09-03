@@ -1,7 +1,7 @@
 import type { SidebarLeftSlotProps } from "@venore/theme-sdk";
 import { cn } from "@venore/theme-sdk/ui";
-import { MobileNavDrawer } from "../../venore-slime/components/MobileNavDrawer";
-import { SidebarNavLink } from "../../venore-slime/components/SidebarNavLink";
+import { MobileNavDrawer } from "./MobileNavDrawer";
+import { SidebarNavLink } from "./SidebarNavLink";
 import { AdminNavSwitch } from "./AdminNavSwitch";
 
 // Largura única, sem colapso — nem rail de ícones, nem coluna que expande/encolhe: pedido desta

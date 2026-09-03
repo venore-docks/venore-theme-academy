@@ -1,8 +1,8 @@
 import Link from "next/link";
 import type { HeaderSlotProps } from "@venore/theme-sdk";
 import { cn } from "@venore/theme-sdk/ui";
-import { MobileNavToggleButton } from "../../venore-slime/components/MobileNavToggleButton";
-import { UserMenu } from "../../venore-slime/components/UserMenu";
+import { MobileNavToggleButton } from "./MobileNavToggleButton";
+import { UserMenu } from "./UserMenu";
 import { BrandMark } from "./BrandMark";
 
 // Faixa única de altura fixa, sem mecânica de encolher/inverter cor ao rolar (o Venore Slime tinha
@@ -55,7 +55,7 @@ export function HeaderSlot({
             {messageAlert && (
               // Alerta de notificação (mensagem não lida ou atividade avaliada) ao lado do
               // user-nav — mesmo dado/mesma regra do Venore Slime (ver comentário em
-              // ../../venore-slime/components/HeaderSlot.tsx), só que com o visual "poucos
+              // ./HeaderSlot.tsx), só que com o visual "poucos
               // efeitos" deste tema em vez das classes group-data-scrolled. Tema só renderiza o
               // `label`, já resolvido por quem produziu o alerta.
               <Link
