@@ -18,7 +18,7 @@ export function HeaderSlot({
   user,
   canAccessAdmin,
   onSignOut,
-  messageAlert,
+  notificationAlert,
   userNavItems,
 }: HeaderSlotProps) {
   return (
@@ -52,21 +52,20 @@ export function HeaderSlot({
       {userbarEnabled ? (
         user ? (
           <div className="flex items-center gap-2">
-            {messageAlert && (
-              // Alerta de notificação (mensagem não lida ou atividade avaliada) ao lado do
-              // user-nav — mesmo dado/mesma regra do Venore Slime (ver comentário em
-              // ./HeaderSlot.tsx), só que com o visual "poucos
-              // efeitos" deste tema em vez das classes group-data-scrolled. Tema só renderiza o
-              // `label`, já resolvido por quem produziu o alerta.
+            {notificationAlert && (
+              // Alerta de notificação (qualquer plugin ativo) ao lado do user-nav — mesmo
+              // dado/mesma regra do Venore Slime (ver comentário em ./HeaderSlot.tsx), só que com
+              // o visual "poucos efeitos" deste tema em vez das classes group-data-scrolled. Tema
+              // só renderiza o `label`, já resolvido por quem produziu o alerta.
               <Link
-                href={messageAlert.href}
+                href={notificationAlert.href}
                 className="inline-flex items-center gap-1.5 rounded-md px-2 py-1.5 text-sm font-medium text-muted-foreground ui-motion-base outline-none hover:bg-muted hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring sm:px-2.5"
               >
                 <span className="relative flex size-2">
                   <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-75" />
                   <span className="relative inline-flex size-2 rounded-full bg-primary" />
                 </span>
-                <span className="hidden sm:inline">{messageAlert.label}</span>
+                <span className="hidden sm:inline">{notificationAlert.label}</span>
               </Link>
             )}
             <UserMenu user={user} canAccessAdmin={canAccessAdmin} onSignOut={onSignOut} userNavItems={userNavItems} />
