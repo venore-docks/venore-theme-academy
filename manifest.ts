@@ -4,7 +4,7 @@ export const academyManifest: ThemeManifest = {
   key: "academy",
   name: "Aprenda Música",
   version: "0.1.0",
-  themeContractVersion: "7.0.0",
+  themeContractVersion: "6.0.0",
   // mode "text": pedido desta sessão — "não vou utilizar .svg, vamos utilizar aquele brand ali"
   // (o ícone + nome do preview). components/BrandMark.tsx é quem realmente desenha a marca (ícone
   // fixo no código + brand.name vindo de /admin/settings/brand); size/scrolledSize/position abaixo
