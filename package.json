@@ -1,6 +1,6 @@
 {
   "name": "@venore/theme-academy",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Academy — tema do Venore Docks (cópia do aprenda-musica).",
   "private": true,
   "type": "module",
