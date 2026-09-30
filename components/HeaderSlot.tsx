@@ -20,6 +20,7 @@ export function HeaderSlot({
   onSignOut,
   notificationAlert,
   userNavItems,
+  showLoginLink,
 }: HeaderSlotProps) {
   return (
     <header
@@ -71,14 +72,14 @@ export function HeaderSlot({
             )}
             <UserMenu user={user} canAccessAdmin={canAccessAdmin} onSignOut={onSignOut} userNavItems={userNavItems} />
           </div>
-        ) : (
+        ) : showLoginLink ? (
           <Link
             href="/login"
             className="rounded-md px-3 py-1.5 text-sm font-medium text-muted-foreground ui-motion-base outline-none hover:bg-muted hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring"
           >
             Entrar
           </Link>
-        )
+        ) : null
       ) : null}
     </header>
   );
